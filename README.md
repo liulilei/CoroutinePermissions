@@ -23,7 +23,7 @@ CoroutineScope(Dispatchers.Main).launch {
         }
 }
 `````
-没错就是这么简单  配合viemodel封装一层try catch 就是这么丝滑！
+没错就是这么简单  配合viemodel封装一层try catch 更丝滑！
 没有回调，没有链式调用，从上到下执行  简单易用！
 
 需要看源码的朋友移步：[https://github.com/liulilei/CoroutinePermissions](https://github.com/liulilei/CoroutinePermissions)
