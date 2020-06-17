@@ -1,5 +1,5 @@
 # CoroutinePermissions
-Kotlin 协程（Coroutine） 一行代码动态申请权限
+Kotlin 协程 一行代码动态申请权限（CoroutinePermissions）
 
 ## 前言
 自6.0之后 所有的敏感权限都需要动态申请，市面上随之出现比较多的权限框架，easypermissions(google出品)、AndPermission、RxPermissions(结合RxJava)。随着 kotlin的逐渐普及，使用协程的人也越来越多，因此就有了本文，结合协程一行代码动态申请权限。
