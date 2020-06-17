@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 29
@@ -36,4 +37,24 @@ dependencies {
     implementation "pub.devrel:easypermissions:3.0.0"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5"
+}
+
+
+publish {
+    artifactId = 'apiFactory-annotation'
+
+    userOrg = 'liul1' //网站注册时候的用户名
+
+    groupId = 'com.github.lilei.coroutinepermissions'  //一般为上传工程的包名
+
+    uploadName = 'CoroutinePermissions' // 上传的名字，可为工程名
+
+    publishVersion = '1.0.0'//上传的版本号
+
+    desc = 'Kotlin 协程 一行代码动态申请权限（CoroutinePermissions）'  //详细说明，可自己编辑
+
+    website = "https://github.com/liulilei/${rootProject.name}" //github地址
+
+    licences = ['Apache-2.0']
+
 }

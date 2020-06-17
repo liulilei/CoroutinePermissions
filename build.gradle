@@ -5,11 +5,13 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        classpath 'com.novoda:bintray-release:0.8.1'//添加
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -20,10 +22,37 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven {
+            url "https://jitpack.io"
+        }
+        mavenCentral()
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+            options.addStringOption('encoding', 'UTF-8')
+        }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+//统一声明配置
+
+ext {
+
+    userOrg = 'liul1' //网站注册时候的用户名
+
+    groupId = 'com.github.lilei.coroutinepermissions'  //一般为上传工程的包名
+
+    uploadName = 'CoroutinePermissions' // 上传的名字，可为工程名
+
+    publishVersion = '1.0.0'//上传的版本号
+
+    desc = 'Kotlin 协程 一行代码动态申请权限（CoroutinePermissions）'  //详细说明，可自己编辑
+
+    website = "https://github.com/liulilei/${rootProject.name}" //github地址
+
+    licences = ['Apache-2.0']
+
 }
