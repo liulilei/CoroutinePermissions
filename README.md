@@ -16,7 +16,7 @@ private val permsSd = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manife
 CoroutineScope(Dispatchers.Main).launch {
         try {
             requestPermissionsForResult(*permsSd, rationale = "为了更好的提供服务，需要获取存储空间权限")
-            //tood 成功 接下来处理逻辑  比如 打开相册
+            //todo 成功 接下来处理逻辑  比如 打开相册
             startActivity(Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI))
         } catch (e: Exception) {
         }
