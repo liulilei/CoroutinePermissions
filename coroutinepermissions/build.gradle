@@ -49,7 +49,7 @@ publish {
 
     uploadName = 'CoroutinePermissions' // 上传的名字，可为工程名
 
-    publishVersion = '1.0.0'//上传的版本号
+    publishVersion = '1.0.1'//上传的版本号
 
     desc = 'Kotlin 协程 一行代码动态申请权限（CoroutinePermissions）'  //详细说明，可自己编辑
 
