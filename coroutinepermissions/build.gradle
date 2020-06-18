@@ -41,11 +41,11 @@ dependencies {
 
 
 publish {
-    artifactId = 'apiFactory-annotation'
+    artifactId = 'coroutine-permissions'
 
     userOrg = 'liul1' //网站注册时候的用户名
 
-    groupId = 'com.github.lilei.coroutinepermissions'  //一般为上传工程的包名
+    groupId = 'com.github.lilei'  //一般为上传工程的包名
 
     uploadName = 'CoroutinePermissions' // 上传的名字，可为工程名
 
