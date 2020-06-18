@@ -10,7 +10,6 @@ Kotlin 协程 一行代码动态申请权限（CoroutinePermissions）
 - 实现协程一行代码 顺序执行 逻辑清晰明了
 
 ## 上代码
-如何使用：
 `````
 private val permsSd = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE)
         
@@ -25,6 +24,23 @@ CoroutineScope(Dispatchers.Main).launch {
 `````
 没错就是这么简单  配合viemodel封装一层try catch 更丝滑！
 没有回调，没有链式调用，从上到下执行  简单易用！
+
+## 如何使用
+在项目主工程的build.gradle文件中加入：
+````
+allprojects {
+    repositories {
+        .......
+        maven {
+            url  "https://dl.bintray.com/liul1/maven"
+        }
+        ......
+}
+````
+在需要使用moudel的build.gradle文件中加入：
+````
+implementation 'com.github.lilei:coroutine-permissions:1.0.0'
+````
 
 需要看源码的朋友移步：[https://github.com/liulilei/CoroutinePermissions](https://github.com/liulilei/CoroutinePermissions)
 
